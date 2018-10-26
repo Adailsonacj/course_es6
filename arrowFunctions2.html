@@ -1,0 +1,39 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <button id="btn">Make my Sandwich!</button>
+</body>
+<script>
+
+    const sandwich = {
+        bread: 'white',
+        cheese: 'cheddar',
+        prepare: function () {
+            return `I want a sandwich with ${this.bread} and ${this.cheese}`
+        },
+        make: function () {
+            var that = this
+            //Em uma arrowFunction o contexto é sempre aquele em que a função
+            //está associado
+            window.setTimeout(() =>{
+                console.log(this.prepare())
+            }, 500)
+
+            //Diferente dessa maneira abaixo, que o this refere-se ao contexto
+            //da window.
+            /* window.setTimeout(function(){
+                console.log(this.prepare())
+            }, 500) */
+            
+        }
+    }
+
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', function () { sandwich.make() })
+
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <button id="btn">Clique!</button>
+</body>
+<script>
+
+    const irlanda = ['Dublin', 'Galway', 'Cork']
+
+    const love = irlanda.map(function (nome) {
+        //Concatenação
+        return `Eu amo ${nome}!`
+    })
+
+    //ArrowFunction
+    const loveArrow = irlanda.map((nome) => {
+        //Concatenação
+        return `Eu amo ${nome}!`
+    })
+
+    //ArrowFunction com apenas um parâmetro
+    const loveArrowSingleParam = irlanda.map(nome => {
+        //Concatenação
+        return `Eu amo ${nome}!`
+    })
+
+    //ArrowFunction com apenas um parâmetro
+    //Se ela for single line, não é necessário uso 
+    //de chaves e nem usar 'return'
+    const loveArrowSingleParamLine = irlanda.map(nome => `Eu amo ${nome}!`)
+
+    //Encadeando funções 'filter' e 'map'
+    const loveChain = irlanda.filter(name => name === 'Dublin').map(name => `I love ${name}!`)
+
+    console.log(loveChain)
+
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', () =>{
+        console.log(this)
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> 01 - Escopo no JS</title>
+    </head>
+    <body>
+        <script>
+
+        //Variáveis feitas com o 'var' são globais, a não ser
+        //que estejam dentro do escopo de uma função
+        var animal = 'cat'
+            function sayAnimal(){ 
+                var animal = 'dog'               
+            console.log(animal)
+        }
+
+        sayAnimal()
+        
+        //Variáveis 'let' --Pesquisas
+        //_Acontece um lançamento de erro caso eu chame essa
+        //variável (a 'const' também) antes de atribuir um valor a ela, algo que
+        //não acontece com o 'var'
+        {
+            let animal = 'meow'
+        }
+
+        //Variáveis 'const' || não é possível declarar a variável
+        //novamente, porém, as propriedades do objeto, é possível
+        //alterar
+        const pessoa = {
+            nome: 'Adailson',
+            idade: 21
+        }
+        pessoa.nome = 'asds'
+        pessoa.idade = 50
+        console.log(pessoa)
+
+        //Tornando objetos imutáveis
+        Object.freeze(pessoa)
+
+        pessoa.nome = 'roberto'
+        //A alteração da propriedade 'nome' acima, não foi
+        // realizada pois o objeto está congelado.
+        console.log(pessoa)
+
+        </script>
+    </body>
+</html>
