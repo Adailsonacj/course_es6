@@ -25,6 +25,37 @@
         uva`
     console.log(fruits2)
 
+    const article = {
+        title: 'Artigo novo',
+        intro: 'novo artigo nobo',
+        body: 'body body body',
+        tags: ['tag1', 'tag2', 'tag3'],
+        autor: 'Adailson'
+    }
+
+    function showAutor(nome){
+        //Condicional
+        return (nome)?nome:'Desconhecido'
+    }
+
+    const markup = `
+    <article>
+        <head>
+        <h1>${article.title}</h1>
+        </head>
+        <section>
+            <p>${article.intro}</p>
+        </section>
+        <footer>
+            <ul>
+                ${article.tags.map((tag) => `<li> ${tag} </li>`).join('')}
+            </ul>
+            ${showAutor(article.autor)}
+        </footer>
+    </article>
+    `
+    document.body.innerHTML = markup
+
 </script>
 
 </html>
