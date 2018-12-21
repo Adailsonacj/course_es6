@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHORTHAND PROPERTIES</title>
+    </head>
+    <body>
+    </body>
+
+    <script>
+       let primeiroNome = 'Adailson'       ;
+       let sobrenome = 'Aguiar'
+       let idade = 22
+
+//Quando a propriedade e o valor tem o mesmo nome resume-se a somente o nome da propriedade (padrão ES6)
+       const pessoa = {
+           primeiroNome,
+           sobrenome,
+           idade,
+           //função de objeto (padrão ES6)
+           hello(){
+               console.log('Hello!')
+           }
+       };
+
+       console.log(pessoa)
+       pessoa.hello()
+    </script>
+</html>
