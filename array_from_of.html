@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Array From/Of</title>
+</head>
+
+<body>
+    <ul id="list">
+        <ui>Melão</ui>
+        <ui>Cajú</ui>
+        <ui>Mamão</ui>
+        <ui>Manga</ui>
+    </ul>
+</body>
+<script>
+    let text = 'Adailson'
+    //Transforma a String em array dividido em caracteres
+    console.log(Array.from(text))
+
+    const list = document.querySelectorAll('#list li')
+    const listArray = Array.from(list)
+    console.log(listArray)
+
+    //Array Of
+    const array = Array.of(1,2,'Junior', 'Souza')
+    console.log(array)
+</script>
+
+</html>
