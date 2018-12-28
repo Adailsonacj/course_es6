@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Destructuring Objects</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        var data = {
+            name: 'Jailson',
+            surname: 'Marinho',
+            age: 30,
+            blog:'http://www.fiat.com',
+            social:{
+                github: 'jailsonmarinho',
+                Facebook: 'jailson_marinho'
+            }
+        }
+
+       /*  const name = data.name
+        const surname = data.surname
+        const facebook = data.social.Facebook */
+
+        const {name, surname} = data
+        console.log(name)
+        console.log(surname)
+        /* const {Facebook, github} = data.social
+        console.log(Facebook +' '+ github) */
+
+        const{Facebook: fb, github: git} = data.social
+        console.log('Fabebook: \"'+fb+'\" Github: \"'+git+'\"')
+
+        //Valor default para propriedade de objeto não existente no objeto
+        const {city = 'Palmas'} = data
+        console.log(city)
+    </script>
+</html>

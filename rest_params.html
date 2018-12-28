@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Rest Params</title>
+</head>
+
+<body>
+</body>
+<script>
+/* 
+    function multiply(mult, arg1, arg2, arg3){
+        let arr = [mult*arg1, mult*arg2, mult*arg3]
+        return arr
+    } */
+
+    function multiply(mult, ...args){
+        return args.map(arg => arg*mult)
+    }
+
+    console.log(multiply(3,4,5,6))
+
+</script>
+
+</html>
