@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Promises</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    var defer = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (true) {
+                resolve('Hello it Works')
+            } else {
+                reject('Error!')
+            }
+        }, 2000)
+    })
+
+    defer
+        .then((data) => {
+            console.log(data)
+            return 'foo'
+        })
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error))
+
+</script>
+
+</html>
