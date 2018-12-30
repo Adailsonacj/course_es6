@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Promise Multiplas</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    const currency = new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+        }, 2000)
+    })
+    const countries = new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+        }, 600)
+    })
+
+   /*  Promise
+        .all([currency, countries])
+        .then(responses => {
+            console.log(responses)
+        }) */
+
+    //O race resolve o a promisse mais rápida e descarta as outras
+    Promise
+        .race([currency, countries])
+        .then(responses => {
+            console.log(responses)
+        })
+
+</script>
+
+</html>

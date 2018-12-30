@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Promise Example</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    var posts = fetch('https://willianjusten.com.br/search.json')
+
+    //Status da Promisse
+    //Pending --> Quando a promise está sendo resolvida.
+    //Resolved --> quando a promise já foi resolvida e retornou algum dado.
+    //Rejected --> ocorreu algum problema na Promise.
+    /*   setTimeout(() => {
+          console.log(posts)
+      }, 3000) */
+
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            //throw new Error('New error!!')
+            console.log(post.title)
+        }))
+        .catch(error => console.log(error))
+
+</script>
+
+</html>
