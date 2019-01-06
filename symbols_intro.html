@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Symbols Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    //O symbol é outro tipo primitivo
+    //Imutável e Único
+    let foo = Symbol('name')
+    let boo = Symbol('name')
+    console.log(foo === boo)
+
+    let people = {
+        [Symbol('nome')]: 'Junior',
+        age: 21,
+        city: 'Georgia'
+    }
+
+    const symbols = Object.getOwnPropertySymbols(people)
+    const data = symbols.map(sym => people[sym])
+
+    console.log(data)
+
+</script>
+
+</html>
