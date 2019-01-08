@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Generators Intro</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        
+        //  Definindo o Generator ( * após a palavra 'function')
+        function* genNomes(){
+            yield 'William'
+            yield 'Paulo'
+            yield 'Messias'
+        }
+
+        const names = genNomes()
+
+        console.log(names)
+
+        console.log(names.next().value)
+        
+    </script>
+</html>

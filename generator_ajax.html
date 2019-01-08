@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Generators Ajax</title>
+</head>
+
+<body>
+</body>
+<script>
+
+
+/*     var posts = fetch('https://willianjusten.com.br/search.json')
+
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            //throw new Error('New error!!')
+            console.log(post.title)
+        }))
+        .catch(error => console.log(error)) */
+
+
+    function ajax(url) {
+        fetch(url)
+            .then(data => data.json())
+            .then(data => cosole.log(data));
+    }
+
+    function ajaxGen() {
+        console.log('Buscando posts')
+        ajax('https://api.github.com/users/Adailsonacj')
+    }
+
+    ajaxGen()
+
+</script>
+
+</html>
