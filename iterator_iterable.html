@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>for - of</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        var txt = 'ireland' // Iterable
+        var it = txt[Symbol.iterator]() // Iterator
+        console.log(it.next())
+        
+        //  For que percorre as letras da palavra
+        for(letter of txt){
+            console.log(letter)
+            // Saindo do for em determinada situação
+            if(letter === 'n') break
+        }
+    </script>
+</html>
