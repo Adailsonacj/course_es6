@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Proxy Intro</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        
+      let obj = {
+          nome: 'Junior',
+          idade: 51
+      }
+
+      let proxy = new Proxy(obj,{
+          //    Target é uma cópia do objeto
+          get(target, nome){
+              return `Aqui é o ${target[nome]}`
+          },
+
+          //    Target => Objeto
+          //    nome => propriedade do objeto
+          //    value => valor a ser atribuido à propriedade
+          set(target, nome, value){
+              target[nome] = value
+            return `Nome alterado para ${target[nome]}`
+          }
+      })
+        
+    </script>
+</html>
