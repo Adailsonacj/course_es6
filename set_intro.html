@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Set Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+    //  SET é baseado no Interator
+
+    //  Guarda valores únicos (só entra uma vez)
+    let meuSet = new Set(['Jânio', 'Wesley', 'Rosa'])
+
+    meuSet.add('Marcelo')
+    meuSet.add('Marcelo')
+    meuSet.add('Marcelo')
+    meuSet.add('Marcelo')
+    meuSet.add('marcelo')
+
+    meuSet.delete('marcelo')
+
+    console.log(meuSet.has('Jânio')) // TRUE
+
+    //  trabalhos com interators
+
+    let it = meuSet.values()
+
+    console.log(it.next())
+
+    for(nome of it){
+        console.log(nome)
+    }
+</script>
+
+</html>
