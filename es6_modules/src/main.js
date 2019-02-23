@@ -6,4 +6,7 @@ const arr2 = [5,6,6,6,7,7,8,9,10,1]
 
 const arr3 = _.union(arr1, arr2)
 
+const arr4 = _.uniq(arr1)
+
+console.log(arr4)
 console.log(arr3)
